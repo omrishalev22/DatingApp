@@ -25,6 +25,8 @@ namespace DatingApp.API.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<string>("PublicId");
+
                     b.Property<string>("Url");
 
                     b.Property<int>("UserId");
@@ -51,7 +53,7 @@ namespace DatingApp.API.Migrations
 
                     b.Property<string>("Gender");
 
-                    b.Property<string>("Interesets");
+                    b.Property<string>("Interests");
 
                     b.Property<string>("Introduction");
 
