@@ -30,10 +30,16 @@ namespace DatingApp.API.Controllers
         // GET api/values/5
         [AllowAnonymous]
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetValue(int id)
+        public IEnumerable<string> GetValue(int id)
         {
-            var value = await this._dataContext.Values.FirstOrDefaultAsync(val=> val.Id == id);
-            return Ok(value);
+            // var value = await this._dataContext.Values.FirstOrDefaultAsync(val=> val.Id == id);
+            IEnumerable<string> omri = new string[]{"wtv","Wtv"};  
+            string[] wtv = new string[]{"asd"};
+            wtv.ToList();
+            omri.ToList();
+            
+            return new string[] {"omri","guy"};
+            // return Ok(value);
         }
 
         // POST api/values
