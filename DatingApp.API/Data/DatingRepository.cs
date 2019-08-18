@@ -69,5 +69,20 @@ namespace DatingApp.API.Data
         {
             return await _context.Likes.FirstOrDefaultAsync(u=> u.LikerId == userId && u.LikeeId == recipientId );
         }
+
+        public async Task<Message> GetMessage(int id)
+        {
+            return await _context.Messages.FirstOrDefaultAsync(msg=>msg.Id == id);
+        }
+
+        public Task<PagedList<Message>> GetMessages()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Message>> GetMessageThread(int senderId, int recipientId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
